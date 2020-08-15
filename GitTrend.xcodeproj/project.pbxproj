@@ -15,6 +15,8 @@
 		146A69A224E81DCA001AED2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146A69A024E81DCA001AED2C /* LaunchScreen.storyboard */; };
 		146A69AD24E81DCA001AED2C /* GitTrendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A69AC24E81DCA001AED2C /* GitTrendTests.swift */; };
 		146A69C224E82ADF001AED2C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A69C124E82ADF001AED2C /* Repo.swift */; };
+		146A69C424E82B0C001AED2C /* GithubResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 146A69C324E82B0C001AED2C /* GithubResponse.json */; };
+		146A69C624E8352D001AED2C /* RepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A69C524E8352D001AED2C /* RepoTests.swift */; };
 		146A69C924E835EC001AED2C /* Bundle+JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A69C824E835EC001AED2C /* Bundle+JSONLoader.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		146A69AC24E81DCA001AED2C /* GitTrendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitTrendTests.swift; sourceTree = "<group>"; };
 		146A69AE24E81DCA001AED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		146A69C124E82ADF001AED2C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		146A69C324E82B0C001AED2C /* GithubResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GithubResponse.json; sourceTree = "<group>"; };
+		146A69C524E8352D001AED2C /* RepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTests.swift; sourceTree = "<group>"; };
 		146A69C824E835EC001AED2C /* Bundle+JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+JSONLoader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +105,8 @@
 				146A69AC24E81DCA001AED2C /* GitTrendTests.swift */,
 				146A69C724E835B6001AED2C /* Utilities */,
 				146A69AE24E81DCA001AED2C /* Info.plist */,
+				146A69C324E82B0C001AED2C /* GithubResponse.json */,
+				146A69C524E8352D001AED2C /* RepoTests.swift */,
 			);
 			path = GitTrendTests;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146A69C424E82B0C001AED2C /* GithubResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +235,7 @@
 			files = (
 				146A69AD24E81DCA001AED2C /* GitTrendTests.swift in Sources */,
 				146A69C924E835EC001AED2C /* Bundle+JSONLoader.swift in Sources */,
+				146A69C624E8352D001AED2C /* RepoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
