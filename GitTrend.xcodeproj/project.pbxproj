@@ -18,6 +18,7 @@
 		146A69C424E82B0C001AED2C /* GithubResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 146A69C324E82B0C001AED2C /* GithubResponse.json */; };
 		146A69C624E8352D001AED2C /* RepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A69C524E8352D001AED2C /* RepoTests.swift */; };
 		146A69C924E835EC001AED2C /* Bundle+JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A69C824E835EC001AED2C /* Bundle+JSONLoader.swift */; };
+		146A69CD24E8659D001AED2C /* StubSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A69CC24E8659D001AED2C /* StubSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		146A69C324E82B0C001AED2C /* GithubResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GithubResponse.json; sourceTree = "<group>"; };
 		146A69C524E8352D001AED2C /* RepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTests.swift; sourceTree = "<group>"; };
 		146A69C824E835EC001AED2C /* Bundle+JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+JSONLoader.swift"; sourceTree = "<group>"; };
+		146A69CC24E8659D001AED2C /* StubSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				146A69C824E835EC001AED2C /* Bundle+JSONLoader.swift */,
+				146A69CC24E8659D001AED2C /* StubSession.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				146A69C924E835EC001AED2C /* Bundle+JSONLoader.swift in Sources */,
+				146A69CD24E8659D001AED2C /* StubSession.swift in Sources */,
 				146A69C624E8352D001AED2C /* RepoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
