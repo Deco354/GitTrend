@@ -1,0 +1,37 @@
+# Mac OS X
+*.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+# Generated files
+*.o
+*.pyc
+
+
+#Python modules
+MANIFEST
+dist/
+build/
+
+# Backup files
+*~.nib
+UnibetApps.xcworkspace/xcshareddata/UnibetApps.xcscmblueprint
+Icon?
+.idea
+
+##Cloud configuration override files##
+**/*.override.json
+
+# Created by https://www.gitignore.io/api/carthage
+
+### Carthage ###
+# Carthage - A simple, decentralized dependency manager for Cocoa
+Carthage/Checkouts/
+Carthage/Build/
