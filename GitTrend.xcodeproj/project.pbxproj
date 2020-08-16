@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		146A699624E81DC9001AED2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A699524E81DC9001AED2C /* AppDelegate.swift */; };
 		146A699824E81DC9001AED2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A699724E81DC9001AED2C /* SceneDelegate.swift */; };
-		146A699A24E81DC9001AED2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A699924E81DC9001AED2C /* ViewController.swift */; };
+		146A699A24E81DC9001AED2C /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A699924E81DC9001AED2C /* RepoListViewController.swift */; };
 		146A699D24E81DC9001AED2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146A699B24E81DC9001AED2C /* Main.storyboard */; };
 		146A699F24E81DCA001AED2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146A699E24E81DCA001AED2C /* Assets.xcassets */; };
 		146A69A224E81DCA001AED2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146A69A024E81DCA001AED2C /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		146A699224E81DC9001AED2C /* GitTrend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitTrend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146A699524E81DC9001AED2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		146A699724E81DC9001AED2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		146A699924E81DC9001AED2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		146A699924E81DC9001AED2C /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
 		146A699C24E81DC9001AED2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		146A699E24E81DCA001AED2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		146A69A124E81DCA001AED2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 				146A69B724E8207C001AED2C /* Networking */,
 				146A699524E81DC9001AED2C /* AppDelegate.swift */,
 				146A699724E81DC9001AED2C /* SceneDelegate.swift */,
-				146A699924E81DC9001AED2C /* ViewController.swift */,
+				146A699924E81DC9001AED2C /* RepoListViewController.swift */,
 				146A699B24E81DC9001AED2C /* Main.storyboard */,
 				146A699E24E81DCA001AED2C /* Assets.xcassets */,
 				146A69A024E81DCA001AED2C /* LaunchScreen.storyboard */,
@@ -243,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				146A69C224E82ADF001AED2C /* Repo.swift in Sources */,
-				146A699A24E81DC9001AED2C /* ViewController.swift in Sources */,
+				146A699A24E81DC9001AED2C /* RepoListViewController.swift in Sources */,
 				146A699624E81DC9001AED2C /* AppDelegate.swift in Sources */,
 				146A69B924E8208D001AED2C /* GitTrendAPI.swift in Sources */,
 				146A69BD24E82250001AED2C /* NetworkSession.swift in Sources */,
