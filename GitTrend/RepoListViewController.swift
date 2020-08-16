@@ -13,9 +13,7 @@ class RepoListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let gitTrendAPI: GitTrendAPI
-    var repos: [Repo] = [
-        Repo(name: "gvisor", description: "Container Runtime Sandbox", author: "google", url: URL(string: "https://github.com/google/gvisor")!, avatar: URL(string: "https://github.com/google.png")!, stars: 3320)
-    ]
+    var repos: [Repo] = []
     
     init?(coder: NSCoder, api: GitTrendAPI) {
         self.gitTrendAPI = api
@@ -28,7 +26,16 @@ class RepoListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        gitTrendAPI.fetchTrendingRepos { repos in
+            self.repos = repos
+            self.reloadTable()
+        }
+    }
+    
+    private func reloadTable() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 
