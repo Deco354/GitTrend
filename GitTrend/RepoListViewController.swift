@@ -11,12 +11,24 @@ import UIKit
 /// Displays list of trending repos within `UITableView`
 class RepoListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    
+    private let gitTrendAPI: GitTrendAPI
     var repos: [Repo] = [
         Repo(name: "gvisor", description: "Container Runtime Sandbox", author: "google", url: URL(string: "https://github.com/google/gvisor")!, avatar: URL(string: "https://github.com/google.png")!, stars: 3320)
     ]
     
+    init?(coder: NSCoder, api: GitTrendAPI) {
+        self.gitTrendAPI = api
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 }
 
