@@ -10,6 +10,7 @@ import Foundation
 
 struct Repo: Decodable, Equatable {
     let name: String
+    let description: String
     let author: String
     let url: URL
     let avatar: URL
