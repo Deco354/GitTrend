@@ -15,6 +15,9 @@ struct Repo: Decodable, Equatable {
     let url: URL
     let authorAvatarURL: URL
     let starCount: Int
+    /// Caches image data
+    /// - warning: Will require a properly managed cache if many Repos with image data are loaded. 25 max at present
+    var imageData: Data?
     
     enum CodingKeys: String, CodingKey {
         case name, description, url
