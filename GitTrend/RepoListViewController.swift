@@ -63,9 +63,9 @@ extension RepoListViewController: UITableViewDataSource {
     private func configure(cell: RepoCell, at indexPath: IndexPath) {
         let repo = repos[indexPath.row]
         cell.nameLabel.text = repo.name
-        cell.authorLabel.text = repo.author
+        cell.authorLabel.text = repo.authorName
         cell.descriptionLabel.text = repo.description
-        cell.starCountLabel.text = String(repo.stars)
+        cell.starCountLabel.text = String(repo.starCount)
     }
 }
 

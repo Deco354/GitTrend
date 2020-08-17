@@ -11,9 +11,16 @@ import Foundation
 struct Repo: Decodable, Equatable {
     let name: String
     let description: String
-    let author: String
+    let authorName: String
     let url: URL
-    let avatar: URL
-    let stars: Int
+    let authorAvatarURL: URL
+    let starCount: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case name, description, url
+        case authorName = "author"
+        case authorAvatarURL = "avatar"
+        case starCount = "stars"
+    }
 }
 

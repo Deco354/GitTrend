@@ -14,7 +14,7 @@ class RepoTests: XCTestCase {
     var testBundle: Bundle { Bundle(for: Self.self) }
     
     func testJSONDecoding() {
-        let expectedRepos = [Repo(name: "gvisor", description: "Container Runtime Sandbox", author: "google", url: URL(string: "https://github.com/google/gvisor")!, avatar: URL(string: "https://github.com/google.png")!, stars: 3320)]
+        let expectedRepos = [Repo(name: "gvisor", description: "Container Runtime Sandbox", authorName: "google", url: URL(string: "https://github.com/google/gvisor")!, authorAvatarURL: URL(string: "https://github.com/google.png")!, starCount: 3320)]
         
         let validJSON = testBundle.jsonData(forResource: "GithubResponse")
         do {
