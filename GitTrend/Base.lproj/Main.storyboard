@@ -15,15 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIY-eB-8hc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="189" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIY-eB-8hc">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoCell" id="4ep-2r-Mpv" customClass="RepoCell" customModule="GitTrend" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="189.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="189"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4ep-2r-Mpv" id="5aK-hu-c6n">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="189.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uK4-pU-F4B">
@@ -42,8 +42,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4qD-6i-F6K">
+                                                    <rect key="frame" x="20" y="134.5" width="40" height="37.5"/>
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="MUP-px-PeQ"/>
+                                                        <constraint firstAttribute="height" constant="40" id="aI9-ss-D65"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPj-OC-DhK">
-                                                    <rect key="frame" x="15" y="157.5" width="290" height="21"/>
+                                                    <rect key="frame" x="68" y="142.5" width="237" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="YSY-L1-s53"/>
                                                     </constraints>
@@ -54,18 +62,21 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="uK4-pU-F4B" secondAttribute="trailing" id="1AD-7K-Hyf"/>
+                                                <constraint firstItem="4qD-6i-F6K" firstAttribute="leading" secondItem="5aK-hu-c6n" secondAttribute="leading" constant="20" symbolic="YES" id="6JV-Tf-M6y"/>
                                                 <constraint firstItem="uK4-pU-F4B" firstAttribute="top" secondItem="5aK-hu-c6n" secondAttribute="topMargin" id="8C8-Dx-S49"/>
-                                                <constraint firstItem="OPj-OC-DhK" firstAttribute="leading" secondItem="5aK-hu-c6n" secondAttribute="leadingMargin" id="Ag5-Qp-aq2"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="OPj-OC-DhK" secondAttribute="bottom" id="DA4-DK-uK4"/>
                                                 <constraint firstAttribute="trailing" secondItem="vs0-qp-FSk" secondAttribute="trailing" constant="20" symbolic="YES" id="JxH-pn-1LI"/>
                                                 <constraint firstItem="vs0-qp-FSk" firstAttribute="leading" secondItem="5aK-hu-c6n" secondAttribute="leading" constant="20" symbolic="YES" id="N4h-LH-acQ"/>
                                                 <constraint firstItem="uK4-pU-F4B" firstAttribute="leading" secondItem="5aK-hu-c6n" secondAttribute="leadingMargin" id="Orn-CL-zdH"/>
-                                                <constraint firstItem="OPj-OC-DhK" firstAttribute="top" secondItem="vs0-qp-FSk" secondAttribute="bottom" constant="32" id="UFe-qN-Vjy"/>
+                                                <constraint firstItem="4qD-6i-F6K" firstAttribute="top" secondItem="vs0-qp-FSk" secondAttribute="bottom" constant="7.5" id="Pqq-hm-Oft"/>
+                                                <constraint firstAttribute="bottom" secondItem="4qD-6i-F6K" secondAttribute="bottom" constant="16" id="TwH-sc-1u0"/>
                                                 <constraint firstItem="vs0-qp-FSk" firstAttribute="top" secondItem="uK4-pU-F4B" secondAttribute="bottom" constant="32" id="iVx-4N-Wzs"/>
+                                                <constraint firstItem="OPj-OC-DhK" firstAttribute="leading" secondItem="4qD-6i-F6K" secondAttribute="trailing" constant="8" id="r4D-Fd-vD1"/>
+                                                <constraint firstItem="OPj-OC-DhK" firstAttribute="centerY" secondItem="4qD-6i-F6K" secondAttribute="centerY" id="xa8-UU-kIw"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="OPj-OC-DhK" secondAttribute="trailing" id="z7G-QJ-7gk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="authorImage" destination="4qD-6i-F6K" id="Zho-m2-w0s"/>
                                             <outlet property="authorLabel" destination="OPj-OC-DhK" id="gAP-Zb-wla"/>
                                             <outlet property="descriptionLabel" destination="vs0-qp-FSk" id="3O8-Mo-TrI"/>
                                             <outlet property="nameLabel" destination="uK4-pU-F4B" id="LqF-7K-Mms"/>
@@ -121,4 +132,7 @@
             <point key="canvasLocation" x="131.25" y="134.1549295774648"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
 </document>
