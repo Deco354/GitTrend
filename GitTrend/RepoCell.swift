@@ -13,5 +13,5 @@ class RepoCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var authorImage: UIImageView!
-    
+    @IBOutlet weak var starCountLabel: UILabel!
 }

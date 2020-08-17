@@ -50,8 +50,8 @@
                                                         <constraint firstAttribute="height" constant="40" id="aI9-ss-D65"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPj-OC-DhK">
-                                                    <rect key="frame" x="68" y="142.5" width="237" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPj-OC-DhK">
+                                                    <rect key="frame" x="68" y="142.5" width="143.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="YSY-L1-s53"/>
                                                     </constraints>
@@ -59,20 +59,34 @@
                                                     <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RXy-nG-XTb" userLabel="Star Image">
+                                                    <rect key="frame" x="283" y="143" width="22" height="20"/>
+                                                    <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8D-Jw-hxf">
+                                                    <rect key="frame" x="219.5" y="142.5" width="59.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="uK4-pU-F4B" secondAttribute="trailing" id="1AD-7K-Hyf"/>
                                                 <constraint firstItem="4qD-6i-F6K" firstAttribute="leading" secondItem="5aK-hu-c6n" secondAttribute="leading" constant="20" symbolic="YES" id="6JV-Tf-M6y"/>
                                                 <constraint firstItem="uK4-pU-F4B" firstAttribute="top" secondItem="5aK-hu-c6n" secondAttribute="topMargin" id="8C8-Dx-S49"/>
+                                                <constraint firstItem="o8D-Jw-hxf" firstAttribute="leading" secondItem="OPj-OC-DhK" secondAttribute="trailing" constant="8" id="Jb0-fM-5RK"/>
                                                 <constraint firstAttribute="trailing" secondItem="vs0-qp-FSk" secondAttribute="trailing" constant="20" symbolic="YES" id="JxH-pn-1LI"/>
                                                 <constraint firstItem="vs0-qp-FSk" firstAttribute="leading" secondItem="5aK-hu-c6n" secondAttribute="leading" constant="20" symbolic="YES" id="N4h-LH-acQ"/>
                                                 <constraint firstItem="uK4-pU-F4B" firstAttribute="leading" secondItem="5aK-hu-c6n" secondAttribute="leadingMargin" id="Orn-CL-zdH"/>
                                                 <constraint firstItem="4qD-6i-F6K" firstAttribute="top" secondItem="vs0-qp-FSk" secondAttribute="bottom" constant="7.5" id="Pqq-hm-Oft"/>
                                                 <constraint firstAttribute="bottom" secondItem="4qD-6i-F6K" secondAttribute="bottom" constant="16" id="TwH-sc-1u0"/>
+                                                <constraint firstItem="RXy-nG-XTb" firstAttribute="leading" secondItem="o8D-Jw-hxf" secondAttribute="trailing" constant="4" id="WZ7-YL-UoH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RXy-nG-XTb" secondAttribute="trailing" id="aW2-ms-tmG"/>
+                                                <constraint firstItem="RXy-nG-XTb" firstAttribute="centerY" secondItem="OPj-OC-DhK" secondAttribute="centerY" id="ged-S8-SBi"/>
                                                 <constraint firstItem="vs0-qp-FSk" firstAttribute="top" secondItem="uK4-pU-F4B" secondAttribute="bottom" constant="32" id="iVx-4N-Wzs"/>
                                                 <constraint firstItem="OPj-OC-DhK" firstAttribute="leading" secondItem="4qD-6i-F6K" secondAttribute="trailing" constant="8" id="r4D-Fd-vD1"/>
                                                 <constraint firstItem="OPj-OC-DhK" firstAttribute="centerY" secondItem="4qD-6i-F6K" secondAttribute="centerY" id="xa8-UU-kIw"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="OPj-OC-DhK" secondAttribute="trailing" id="z7G-QJ-7gk"/>
+                                                <constraint firstItem="o8D-Jw-hxf" firstAttribute="centerY" secondItem="OPj-OC-DhK" secondAttribute="centerY" id="zY3-gV-lD3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -80,6 +94,7 @@
                                             <outlet property="authorLabel" destination="OPj-OC-DhK" id="gAP-Zb-wla"/>
                                             <outlet property="descriptionLabel" destination="vs0-qp-FSk" id="3O8-Mo-TrI"/>
                                             <outlet property="nameLabel" destination="uK4-pU-F4B" id="LqF-7K-Mms"/>
+                                            <outlet property="starCountLabel" destination="o8D-Jw-hxf" id="QMs-gV-T8R"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -134,5 +149,6 @@
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>

@@ -65,6 +65,7 @@ extension RepoListViewController: UITableViewDataSource {
         cell.nameLabel.text = repo.name
         cell.authorLabel.text = repo.author
         cell.descriptionLabel.text = repo.description
+        cell.starCountLabel.text = String(repo.stars)
     }
 }
 
