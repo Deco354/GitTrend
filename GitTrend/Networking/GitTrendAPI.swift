@@ -12,7 +12,7 @@ import UIKit.UIImage
 /// Downloads trending repos from [github-trending-api](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/Links.html)
 class GitTrendAPI  {
     private let session: NetworkSession
-    private let url = URL(string: "https://ghapi.huchen.dev/repositories?language=swift&since=weekly")!
+    private let url = URL(string: "https://ghapi.huchen.dev/repositories?language=swift&since=weekly&spoken_language_code=en")!
     
     init(session: NetworkSession = URLSession.shared) {
         self.session = session
