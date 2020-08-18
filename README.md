@@ -32,3 +32,6 @@ If you scroll very fast upon the initial load it's possible to have more than on
 for the avatar url images. This can be remedied by either recording the requests made within the
 `GitTrendAPI` or by using a third party networking library. I chose not to do the latter here
 as the purpose of this project is to showcase my own code for hiring purposes.
+
+### Add Error Handling to Network layer and utilize Result
+-
