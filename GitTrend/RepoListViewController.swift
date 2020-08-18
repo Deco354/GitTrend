@@ -27,16 +27,23 @@ class RepoListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lowerNavigationBarText()
+        configureRefreshControl()
         gitTrendAPI.fetchTrendingRepos { repos in
             self.repos = repos
             self.reloadTable()
         }
     }
     
-    /// Adjusts Navigation Bar Text so it's not too close to the status bar for phones without top-notch (iphone SE & 8)
-    private func lowerNavigationBarText() {
-        navigationController?.navigationBar.setTitleVerticalPositionAdjustment(CGFloat(5), for: UIBarMetrics.default)
+    @objc private func handleRefreshControl() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.tableView.refreshControl?.endRefreshing()
+        }
+    }
+    
+    private func configureRefreshControl () {
+       tableView.refreshControl = UIRefreshControl()
+       tableView.refreshControl?.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
     }
     
     private func reloadTable() {
