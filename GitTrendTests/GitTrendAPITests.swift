@@ -10,7 +10,7 @@ import XCTest
 @testable import GitTrend
 
 class GitTrendAPITests: XCTestCase {
-    var expectedURL = URL(string: "https://ghapi.huchen.dev/repositories?language=swift&since=weekly")!
+    var expectedURL = URL(string: "https://ghapi.huchen.dev/repositories?language=swift&since=weekly&spoken_language_code=en")!
     var returnedRepos: [Repo] = []
     var testBundle: Bundle { Bundle(for: Self.self) }
 
