@@ -51,35 +51,14 @@ class RepoListViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-    
-    /// Reload row at index path on main thread
-    private func reloadRow(atIndexPath indexPath: IndexPath) {
-        DispatchQueue.main.async {
-            self.tableView.reloadRows(at: [indexPath], with: .none)
-        }
-    }
 }
 
 extension RepoListViewController: UITableViewDelegate {
-    /// Downloads author avatar image if it's not cached locally
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        if repos[indexPath.row].imageData == nil {
-            downloadImage(at: indexPath)
-        }
-    }
     
     /// Launch Embedded Safari browser for Repo at selected Row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let repoURL = repos[indexPath.row].url
         launchSafari(with: repoURL)
-    }
-    
-    private func downloadImage(at indexPath: IndexPath) {
-        gitTrendAPI.fetchImageData(fromURL: repos[indexPath.row].authorAvatarURL) { data in
-            self.repos[indexPath.row].imageData = data
-            self.reloadRow(atIndexPath: indexPath)
-        }
     }
     
     private func launchSafari(with url: URL) {
@@ -110,6 +89,26 @@ extension RepoListViewController: UITableViewDataSource {
         cell.starCountLabel.text = String(repo.starCount)
         if let imageData = repo.imageData {
             cell.authorImage.image = UIImage(data: imageData)
+        } else {
+            downloadImage(at: indexPath)
+        }
+    }
+    
+    private func downloadImage(at indexPath: IndexPath) {
+        gitTrendAPI.fetchImageData(fromURL: repos[indexPath.row].authorAvatarURL) { data in
+            guard let data = data else { return }
+            self.repos[indexPath.row].imageData = data
+            self.updateImage(forCellAt: indexPath, withImageData: data)
+        }
+    }
+    
+    /// Reload row at index path on main thread
+    private func updateImage(forCellAt indexPath: IndexPath, withImageData imageData: Data) {
+        DispatchQueue.main.async {
+            guard let visibleCellToUpdate = self.tableView.cellForRow(at: indexPath) as? RepoCell else {
+                return
+            }
+            visibleCellToUpdate.authorImage.image = UIImage(data: imageData)
         }
     }
 }
@@ -117,5 +116,13 @@ extension RepoListViewController: UITableViewDataSource {
 extension RepoListViewController: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         dismiss(animated: true)
+    }
+}
+
+extension UITableView {
+    
+    func isCellVisible(at indexPath: IndexPath) -> Bool {
+        let visibleIndices = self.indexPathsForVisibleRows ?? []
+        return visibleIndices.contains(indexPath)
     }
 }
