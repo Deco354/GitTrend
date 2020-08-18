@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 /// Displays list of trending repos within `UITableView`
 class RepoListViewController: UIViewController {
@@ -61,11 +62,23 @@ extension RepoListViewController: UITableViewDelegate {
         }
     }
     
+    /// Launch Embedded Safari browser for Repo at selected Row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repoURL = repos[indexPath.row].url
+        launchSafari(with: repoURL)
+    }
+    
     private func downloadImage(at indexPath: IndexPath) {
         gitTrendAPI.fetchImageData(fromURL: repos[indexPath.row].authorAvatarURL) { data in
             self.repos[indexPath.row].imageData = data
             self.reloadRow(atIndexPath: indexPath)
         }
+    }
+    
+    private func launchSafari(with url: URL) {
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.delegate = self
+        present(safariViewController, animated: true)
     }
 }
 
@@ -91,5 +104,11 @@ extension RepoListViewController: UITableViewDataSource {
         if let imageData = repo.imageData {
             cell.authorImage.image = UIImage(data: imageData)
         }
+    }
+}
+
+extension RepoListViewController: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }
