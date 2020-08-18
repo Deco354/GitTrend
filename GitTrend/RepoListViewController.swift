@@ -27,10 +27,23 @@ class RepoListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureRefreshControl()
         gitTrendAPI.fetchTrendingRepos { repos in
             self.repos = repos
             self.reloadTable()
         }
+    }
+    
+    @objc private func handleRefreshControl() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.tableView.refreshControl?.endRefreshing()
+        }
+    }
+    
+    private func configureRefreshControl () {
+       tableView.refreshControl = UIRefreshControl()
+       tableView.refreshControl?.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
     }
     
     private func reloadTable() {
