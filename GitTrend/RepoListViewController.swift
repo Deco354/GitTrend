@@ -43,9 +43,31 @@ class RepoListViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    /// Reload row at index path on main thread
+    private func reloadRow(atIndexPath indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            self.tableView.reloadRows(at: [indexPath], with: .none)
+        }
+    }
 }
 
-extension RepoListViewController: UITableViewDelegate {}
+extension RepoListViewController: UITableViewDelegate {
+    /// Downloads author avatar image if it's not cached locally
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if repos[indexPath.row].imageData == nil {
+            downloadImage(at: indexPath)
+        }
+    }
+    
+    private func downloadImage(at indexPath: IndexPath) {
+        gitTrendAPI.fetchImageData(fromURL: repos[indexPath.row].authorAvatarURL) { data in
+            self.repos[indexPath.row].imageData = data
+            self.reloadRow(atIndexPath: indexPath)
+        }
+    }
+}
 
 extension RepoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,6 +88,8 @@ extension RepoListViewController: UITableViewDataSource {
         cell.authorLabel.text = repo.authorName
         cell.descriptionLabel.text = repo.description
         cell.starCountLabel.text = String(repo.starCount)
+        if let imageData = repo.imageData {
+            cell.authorImage.image = UIImage(data: imageData)
+        }
     }
 }
-
