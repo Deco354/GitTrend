@@ -16,8 +16,10 @@ class StubSession {
     private(set) var interceptedNetworkCallURL: URL?
     private let data: Data?
     private let error: Error?
+    /// Can disable completionHandler when we want to simulate a network call that hasn't returned yet
+    var willCallCompletionHandler = true
     
-    init(data: Data? = nil, error: Error? = nil) {
+    init(data: Data? = nil, error: Error? = nil, willCallCompletionHandler: Bool = true) {
         self.data = data
         self.error = error
     }
@@ -34,7 +36,9 @@ extension StubSession: NetworkSession {
     /// Common interface shared by real and stubbed `NetworkSession`s
     func loadData(from url: URL, completionHandler: @escaping (Data?, Error?) -> Void) {
         interceptedNetworkCallURL = url
-        completionHandler(data, error)
+        if willCallCompletionHandler {
+            completionHandler(data, error)
+        }
     }
 }
 
