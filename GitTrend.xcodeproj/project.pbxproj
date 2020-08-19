@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1430E87924ED35B1009B4B94 /* RepoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430E87824ED35B1009B4B94 /* RepoCellViewModel.swift */; };
+		1430E87D24ED3E3E009B4B94 /* RepoCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430E87C24ED3E3E009B4B94 /* RepoCellViewModelTests.swift */; };
 		146A699624E81DC9001AED2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A699524E81DC9001AED2C /* AppDelegate.swift */; };
 		146A699824E81DC9001AED2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A699724E81DC9001AED2C /* SceneDelegate.swift */; };
 		146A699A24E81DC9001AED2C /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A699924E81DC9001AED2C /* RepoListViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1430E87824ED35B1009B4B94 /* RepoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellViewModel.swift; sourceTree = "<group>"; };
+		1430E87C24ED3E3E009B4B94 /* RepoCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellViewModelTests.swift; sourceTree = "<group>"; };
 		146A699224E81DC9001AED2C /* GitTrend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitTrend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146A699524E81DC9001AED2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		146A699724E81DC9001AED2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				146A69C324E82B0C001AED2C /* GithubResponse.json */,
 				146A69C524E8352D001AED2C /* RepoTests.swift */,
 				146A69CA24E86426001AED2C /* GitTrendAPITests.swift */,
+				1430E87C24ED3E3E009B4B94 /* RepoCellViewModelTests.swift */,
 			);
 			path = GitTrendTests;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				146A69CB24E86426001AED2C /* GitTrendAPITests.swift in Sources */,
 				146A69CD24E8659D001AED2C /* StubSession.swift in Sources */,
 				146A69C624E8352D001AED2C /* RepoTests.swift in Sources */,
+				1430E87D24ED3E3E009B4B94 /* RepoCellViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
